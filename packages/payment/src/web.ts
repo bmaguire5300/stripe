@@ -81,8 +81,11 @@ export class StripeWeb extends WebPlugin implements StripePlugin {
     this.paymentSheet.publishableKey = this.publishableKey;
 
     if (this.stripeAccount) {
-      this.paymentSheet.stripeAccount = this.stripeAccount;
-    }
+            console.log("################################################" + this.stripeAccount);
+            this.paymentSheet.stripeAccount = this.stripeAccount;
+        } else {
+            console.log("00000000000000000000000000000000000000000000000000");
+        }
 
     this.paymentSheet.applicationName = '@capacitor-community/stripe';
 
@@ -101,7 +104,7 @@ export class StripeWeb extends WebPlugin implements StripePlugin {
     if (!this.paymentSheet) {
       throw new Error();
     }
-
+ 
     const props = await this.paymentSheet.present();
     if (props === undefined) {
       this.notifyListeners(PaymentSheetEventsEnum.Canceled, null);
