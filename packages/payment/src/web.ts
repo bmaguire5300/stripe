@@ -84,7 +84,7 @@ export class StripeWeb extends WebPlugin implements StripePlugin {
             console.log("################################################" + this.stripeAccount);
             this.paymentSheet.stripeAccount = this.stripeAccount;
         } else {
-            console.log("00000000000000000000000000000000000000000000000000");
+            console.log("LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
         }
 
     this.paymentSheet.applicationName = '@capacitor-community/stripe';
